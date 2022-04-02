@@ -1,0 +1,186 @@
+.clients {
+  padding-top: 125px;
+  padding-bottom: 70px;
+}
+
+.clients__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.clients__tbody {
+  position: relative;
+  animation: fadein 2s cubic-bezier(1, 0.01, 0.14, 0.99);
+}
+
+.clients__heading {
+  margin: 0 0 25px;
+  color: var(--color-mine-shaft);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 33px;
+}
+
+.display-info tr {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.display-info__item {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--color-silver-chalice);
+}
+
+.display-info__item--id,
+.display-info__sorting {
+  text-transform: uppercase;
+  color: var(--color-emerald);
+}
+
+.display-info__item--id,
+.display-info__item--name,
+.display-info__item--create,
+.display-info__item--change {
+  cursor: pointer;
+  user-select: none;
+  transition: color .3s ease-in-out;
+}
+
+.display-info__item--name:hover,
+.display-info__item--create:hover,
+.display-info__item--change:hover {
+  cursor: pointer;
+  user-select: none;
+  color: var(--color-mine-shaft);
+}
+
+.display-info__item--id {
+  width: 35px;
+  background-position: right center;
+  margin-left: 15px;
+}
+
+.display-info__item--name {
+  width: 180px;
+  margin-right: 40px;
+  padding-right: 20px;
+}
+
+.display-info__sorting {
+  padding-left: 3px;
+  font-size: 11px;
+}
+
+.display-info__item--create {
+  position: relative;
+  width: 100px;
+  margin-right: 2px;
+}
+
+.display-info__item--create::before {
+  content: 'Date and time';
+  position: absolute;
+  top: -14px;
+  right: -2px;
+}
+
+.display-info__item--change {
+  position: relative;
+  width: 118px;
+  padding-right: 43px;
+  margin-right: 21px;
+}
+
+.display-info__item--change::before {
+  content: 'changes';
+  position: absolute;
+  top: 0;
+  right: 1px;
+  margin-right: 11px;
+}
+
+.display-info__item--contacts {
+  width: 150px;
+  
+  padding-right: 3%;
+}
+
+.display-info__item--actions {
+  padding-right: 7%;
+}
+
+.clients__btn {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 12px 26px;
+  align-self: center;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  border: 1px solid var(--color-emerald);
+  color: var(--color-emerald);
+  opacity: 1;
+  transition: all .5s;
+}
+
+.clients__btn--hide {
+  opacity: 0;
+}
+
+.clients__btn svg {
+  display: block;
+  margin-right: 10px;
+  transition: fill .3s ease;
+  fill: var(--color-emerald);
+}
+
+.clients__btn:hover {
+  transition: color .3s ease-in-out, background-color .3s ease-in-out;
+  background-color: var(--color-emerald);
+  color: var(--color-white);
+}
+
+.clients__btn:hover svg {
+  transition: fill .3s ease;
+  fill: var(--color-white);
+}
+
+.create__span,
+.change__span {
+  display: inline-block;
+  width: 7px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: url('../img/arr-down.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.sort-up,
+.sort-down {
+  background-repeat: no-repeat;
+}
+
+.sort-up {
+  background-image: url('../img/arr-up.svg');
+}
+
+.sort-down {
+  background-image: url('../img/arr-down.svg');
+}
+
+.display-info__item--create,
+.display-info__item--name,
+.display-info__item--change {
+  background-image: none;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
